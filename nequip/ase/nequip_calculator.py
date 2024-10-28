@@ -149,3 +149,6 @@ class NequIPCalculator(Calculator):
             # ase wants voigt format
             stress_voigt = full_3x3_to_voigt_6_stress(stress)
             self.results["stress"] = stress_voigt
+        else:
+            import numpy as np
+            self.results["stress"] = np.zeros(6)
